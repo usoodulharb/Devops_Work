@@ -1,0 +1,7 @@
+1) Built and deployed java frontend and backend code on the tomcat9 server(manually)
+2) Deployed java frontend and backend code on the tomcat9 server via Jenkins pipelines.
+3) Created Jenkins pipeline on windows environment.
+4) Created script for auto_deployment, webhooks like operations.
+
+This is what I have learned and achieved so far, looking forward to learning more under the mentorship of you and Ali bhai.
+
