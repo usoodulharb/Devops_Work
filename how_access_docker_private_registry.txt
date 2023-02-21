@@ -1,0 +1,22 @@
+Problem
+you cannot log in to your docker registry. The error return is: x509: certificate signed by unknown authority.
+
+
+For linux Users:
+
+Resolving the problem:
+
+Create the following directory on the server where you are running docker login.
+
+--> mkdir -p /etc/docker/certs.d/privateregistry:5555
+
+Copy your docker registry certificate file from your docker registry host to the cluster where you are running docker login.
+ Rename your docker registry certificate file to /etc/docker/certs.d/<your_registry_host_name>:<your_registry_host_port>/ca.crt.
+
+--> scp <your_registry_host_name>:/opt/registry/certs/domain.crt /etc/docker/certs.d/<your_registry_host_name>:<your_registry_host_port>/ca.crt
+
+
+For example:
+
+mkdir -p /etc/docker/certs.d/
+scp privateregistry:/opt/registry/certs/domain.crt /etc/docker/certs.d/privateregistry:5555/ca.crt
