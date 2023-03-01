@@ -1,0 +1,37 @@
+
+
+
+Changing Jenkins Port (Part 1)
+sudo nano /etc/default/jenkins
+
+Scroll down until you find the following lines:
+
+# port for HTTP connector (default 8080; disable with -1)
+
+HTTP_PORT=8080
+
+Edit the second line to include the port number you want to specify. For instance:
+
+HTTP_PORT=8081
+
+Restart Jenkins:
+
+sudo systemctl restart jenkins
+
+Changing Jenkins Port (Part 2)
+Populate /lib/systemd/system/jenkins.service with configuration parameters for the launch To change jenkins port, set Jenkins to listen on port <PORT_NUMBER>:
+
+Open systemd service file:
+sudo vi /lib/systemd/system/jenkins.service
+
+change port:
+
+[Service]
+Environment="JENKINS_PORT=9191"
+
+Reload units:
+sudo systemctl daemon-reload
+
+Restart jenkins:
+sudo systemctl restart jenkins
+
