@@ -1,0 +1,31 @@
+In alpine linux
+
+Run the following Commands
+
+apk update && apk upgrade
+
+apk add openjdk17
+
+java -version
+
+apk add maven
+
+mvn -version
+apk add curl
+apk add --no-cache bash
+
+apk add zip
+
+curl -s https://get.sdkman.io | bash
+switch to bash terminal
+
+bash
+sdk install springboot
+
+now clone backend code
+goto the location where pom.xml available
+now run
+
+mvn clean package
+
+
