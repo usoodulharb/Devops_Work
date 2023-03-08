@@ -1,0 +1,9 @@
+1: open a terminal, type `sudo visudo`.
+
+visudo is a txt document which handle configurations for sudo prompt. We’ll set our account from in NOPASSWD setting.
+
+2: go to the end of the file, then add the following line in this format:
+
+[username] ALL=(ALL) NOPASSWD: ALL
+
+Remember, [username] will be replaced by your local account’s name. So, if your name is David, it will be David ALL = (ALL) NOPASSWD: ALL.
